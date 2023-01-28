@@ -10,14 +10,16 @@ public class Programa {
 
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        
+        System.out.println("Pensão John People ");
+        System.out.println("Quartos disponiveis: 10 quartos");
+        System.out.println("");
         System.out.print("Quantos quartos serão alugados: ");
         int tamanho = teclado.nextInt();
         QuartoPessoa[] vetor = new QuartoPessoa[10];
-        for (int i = 0; i < tamanho; i++) {
+        for (int i = 1; i < tamanho; i++) {
             System.out.println("");
             teclado.nextLine();
-            System.out.println("Aluguel #"+(i+1)+":");
+            System.out.println("Aluguel #" + (i + 1) + ":");
             System.out.print("Nome: ");
             String nome = teclado.nextLine();
             System.out.print("Email: ");
@@ -29,12 +31,11 @@ public class Programa {
         System.out.println("");
         System.out.println("Quartos Alugados: ");
         for (int i = 0; i < 10; i++) {
-            if (vetor[i]!= null) {
-                System.out.println(i+": "+vetor[i]);
-                
-            }
+            if (vetor[i] != null) {
+                System.out.println(i + ": " + vetor[i]);
+            } 
         }
-     
+
         teclado.close();
     }
 
