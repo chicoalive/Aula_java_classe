@@ -16,7 +16,7 @@ public class Programa {
         System.out.print("Quantos quartos serão alugados: ");
         int tamanho = teclado.nextInt();
         QuartoPessoa[] vetor = new QuartoPessoa[10];
-        for (int i = 1; i < tamanho; i++) {
+        for (int i = 0; i < tamanho; i++) {
             System.out.println("");
             teclado.nextLine();
             System.out.println("Aluguel #" + (i + 1) + ":");
@@ -27,13 +27,21 @@ public class Programa {
             System.out.print("Quarto: ");
             int numero = teclado.nextInt();
             vetor[numero] = new QuartoPessoa(nome, email);
+
         }
+
         System.out.println("");
         System.out.println("Quartos Alugados: ");
         for (int i = 0; i < 10; i++) {
             if (vetor[i] != null) {
                 System.out.println(i + ": " + vetor[i]);
-            } 
+            }
+        }
+        System.out.println("Quartos disponiveis");
+        for (int i = 0; i < 10; i++) {
+            if (vetor[i] == null) {
+                System.out.println("Quarto: "+i + ": " + " Disponivel");
+            }
         }
 
         teclado.close();
